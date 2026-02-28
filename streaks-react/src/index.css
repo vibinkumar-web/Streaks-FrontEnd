@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+@import 'tailwindcss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --gray-100: #f4f4f4;
+  --gray-200: #e8e8e8;
+  --gray-400: #9a9a9a;
+  --gray-600: #555555;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Hero background image ─── */
+.hero-bg {
+  background: url('/bgimg2.jpg') center / cover no-repeat;
+}
+
+.hood-bg {
+  background: url('/hood.jpg') center top / cover no-repeat;
+}
+
+.cap-bg {
+  background: url('/capbanner.jpeg') center / cover no-repeat;
+}
+
+/* ─── Animations ─── */
+@keyframes heroZoom {
+  from {
+    transform: scale(1.12);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes riseUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollPulse {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(6px);
+  }
+}
+
+.anim-hero-zoom {
+  animation: heroZoom 4s ease-out both;
+}
+
+.anim-rise {
+  animation: riseUp 0.9s 0.4s ease-out both;
+}
+
+.anim-scroll {
+  animation: scrollPulse 2.2s ease-in-out infinite;
+}
+
+/* ─── Nav underline ─── */
+.nav-link {
+  position: relative;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── Section header ─── */
+.section-eyebrow {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* ─── Product card ─── */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.product-card__img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: var(--gray-100);
+  position: relative;
+}
+
+.product-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-card__img img {
+  transform: scale(1.06);
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+}
+
+.product-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem 1.25rem 1.5rem;
+  gap: 0;
+}
+
+.product-card__title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.product-card__desc {
+  font-size: 0.78rem;
+  color: var(--gray-600);
+  line-height: 1.65;
+  flex: 1;
+  /* clamp to 3 lines so all cards are same height */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 1.1rem;
+}
+
+.product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-200);
+  margin-top: auto;
+}
+
+.product-card__price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.02em;
+}
+
+.product-card__btn {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--black);
+  padding: 9px 18px;
+  transition: background 0.25s, color 0.25s;
+}
+
+.product-card__btn:hover {
+  background: var(--gray-600);
+}
+
+/* ─── Banner section ─── */
+.banner-overlay-r {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.72) 35%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+.banner-overlay-l {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.72) 35%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+.banner-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  color: #fff;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+}
+
+.banner-sub {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.banner-btn {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  padding: 11px 30px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.banner-btn:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* ─── Footer ─── */
+.footer-root {
+  background: var(--black);
+  color: var(--white);
+}
+
+.footer-col-title {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.footer-link {
+  display: block;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s;
+  line-height: 2;
+}
+
+.footer-link:hover {
+  color: var(--white);
+}
+
+.footer-social {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.footer-social:hover {
+  background: var(--white);
+  border-color: var(--white);
+}
+
+.footer-social:hover svg {
+  fill: var(--black);
+}
+
+.footer-social svg {
+  fill: rgba(255, 255, 255, 0.55);
+  width: 15px;
+  height: 15px;
+  transition: fill 0.25s;
+}
