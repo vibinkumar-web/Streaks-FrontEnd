@@ -3,117 +3,746 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STREAKS</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <title>STREAKS — Premium Streetwear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <section class="home">
-    <header id="header">
-            <ul class="navlist">
-                <li><a href="#boots" style="font-size: 25px;">Boots</a></li>
-                <li><a href="#hood1" style="font-size: 25px;">Hoodies</a></li>
-                <li id="streaks"><a href="#header">STREAKS</a></li>
-                <li><a href="#cap1" style="font-size: 25px;">Hats</a></li>
-                <li><a href="#contact" style="font-size: 25px;">Contact</a></li>
-            </ul>    
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo"><a href="#home">STREAKS</a></div>
+            <nav class="nav-links">
+                <a href="#footwear">Footwear</a>
+                <a href="#hoodies">Hoodies</a>
+                <a href="#hats">Hats</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn-login" id="openLogin">Login</button>
+                <button class="btn-register" id="openRegister">Register</button>
+                <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#footwear">Footwear</a>
+            <a href="#hoodies">Hoodies</a>
+            <a href="#hats">Hats</a>
+            <a href="#contact">Contact</a>
+            <div class="mobile-auth">
+                <button class="btn-login" id="mobileOpenLogin">Login</button>
+                <button class="btn-register" id="mobileOpenRegister">Register</button>
+            </div>
+        </div>
     </header>
-            <div class="hometext">
-            <h1>50% OFF <br>EVERYTHING!</h1>
-            <b><a href="#">SHOP NOW</a></b>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeLogin">&times;</button>
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <p>Sign in to your STREAKS account</p>
             </div>
-
-    </section>
-    <section class="home2">
-            <div id="boots">
-                <img src="img/boots.jpg" alt="" height="300px" width="300px">
-                <h1 id="l"><a href="#">LEATHER BOOTS</a></h1>
-                <p>Lorem, ipsum dolor sit amet<br>consectetur adipisicing elit Consequu<br>quia aperiam, nihil perspiciatis nemo</p>
-                <h5><a href="#">SHOP NOW</a></h5>
-            </div>
-            <div id="sneaker">
-                <img src="img/sneaker.jpg" alt="" height="300px" width="300px">
-                <h1 id="s"><a href="#">SNEAKERS</a></h1>
-                <p>Lorem, ipsum dolor sit amet<br>consectetur adipisicing elit Consequu<br>quia aperiam, nihil perspiciatis nemo</p>
-                <h5><a href="#">SHOP NOW</a></h5>
-            </div>
-            <div id="sports">
-                <img src="img/sports.jpg" alt="" height="300px" width="300px">
-                <h1 id="sp"><a href="#">SPORTS</a></h1>
-                <p>Lorem, ipsum dolor sit amet<br>consectetur adipisicing elit Consequu<br>quia aperiam, nihil perspiciatis nemo</p>
-                <h5><a href="#">SHOP NOW</a></h5>
-            </div>
-    </section>
-
-    <section class="home3">
-        <div class="hometext3">
-            <h1>HOODIES</h1>
-            <h3>HEAVY-WEIGHT BLEND</h3> <br> 
-            <a href="#">SHOP NOW</a>
-        </div>
-    </section>
-
-    <section class="home4">
-        <div id="hood1">
-            <img src="img/hood1.jpeg" alt="" height="300px" width="300px">
-            <h1 id="ho1"><a href="#">VINTAGE HOOD</a></h1>
-            <p>Lorem, ipsum dolor sit amet<br>consectetur adipisicing elit Consequu<br>quia aperiam, nihil perspiciatis nemo</p>
-            <h5><a href="#">SHOP NOW</a></h5>
-        </div>
-        <div id="hood2">
-            <img src="img/hood2.jpeg" alt="" height="300px" width="300px">
-            <h1 id="ho2"><a href="#">CHINESE HOOD</a></h1>
-            <p>Lorem, ipsum dolor sit amet<br>consectetur adipisicing elit Consequu<br>quia aperiam, nihil perspiciatis nemo</p>
-            <h5><a href="#">SHOP NOW</a></h5>
-        </div>
-        <div id="hood3">
-            <img src="img/hood3.jpeg" alt="" height="300px" width="300px">
-            <h1 id="ho3"><a href="#">WHITE DRAGON</a></h1>
-            <p>Lorem, ipsum dolor sit amet<br>consectetur adipisicing elit Consequu<br>quia aperiam, nihil perspiciatis nemo</p>
-            <h5><a href="#">SHOP NOW</a></h5>
-        </div>
-    </section>
-     
-    <section class="home5">
-        <div class="hometext4">
-            <h1>HATS</h1>
-            <h3>All-black SNAPBACK</h3> <br> 
-            <a href="#">SHOP NOW</a>
-        </div>
-    </section>
-
-    <section class="home6">
-        <div id="cap1">
-            <img src="img/cap1.jpeg" alt="" height="350px" width="300px">
-            <h1 id="ca1"><a href="#">TRUCKER</a></h1>
-            <p>Lorem, ipsum dolor sit amet<br>consectetur adipisicing elit Consequu<br>quia aperiam, nihil perspiciatis nemo</p>
-            <h5><a href="#">SHOP NOW</a></h5>
-        </div>
-        <div id="cap2">
-            <img src="img/cap2.jpeg" alt="" height="350px" width="300px">
-            <h1 id="ca2"><a href="#">MILD TONE</a></h1>
-            <p>Lorem, ipsum dolor sit amet<br>consectetur adipisicing elit Consequu<br>quia aperiam, nihil perspiciatis nemo</p>
-            <h5><a href="#">SHOP NOW</a></h5>
-        </div>
-        <div id="cap3">
-            <img src="img/cap3.jpeg" alt="" height="350px" width="300px">
-            <h1 id="ca3"><a href="#">FLIGHT</a></h1>
-            <p>Lorem, ipsum dolor sit amet<br>consectetur adipisicing elit Consequu<br>quia aperiam, nihil perspiciatis nemo</p>
-            <h5><a href="#">SHOP NOW</a></h5>
-        </div>
-    </section>
-
-    <div id="contact">
-        <h1>CONTACT US</h1>
-        <div class="email">
-            <img src="img/mail.png" alt="" height="30px" width="30px">
-            <h4>EMAIL : STREAXEDSHOES022@GMAIL.COM</h4> 
-        </div>
-
-        <div class="call">
-            <img src="img/call.png" alt="" height="30px" width="30px">
-            <h4>CALL : +652 4083100882</h4> 
+            <form class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="••••••••" required>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-submit">Sign In</button>
+                <p class="auth-switch">Don't have an account? <a href="#" id="switchToRegister">Create one</a></p>
+            </form>
+            <div class="auth-divider"><span>or</span></div>
+            <button class="social-btn">Continue with Google</button>
         </div>
     </div>
-</body> 
+
+    <!-- REGISTER MODAL -->
+    <div class="modal-overlay" id="registerModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeRegister">&times;</button>
+            <div class="modal-header">
+                <h2>Create Account</h2>
+                <p>Join the STREAKS community</p>
+            </div>
+            <form class="auth-form" id="registerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="regFirst">First Name</label>
+                        <input type="text" id="regFirst" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regLast">Last Name</label>
+                        <input type="text" id="regLast" placeholder="Doe" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email Address</label>
+                    <input type="email" id="regEmail" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" placeholder="Min. 8 characters" required minlength="8">
+                </div>
+                <div class="form-group">
+                    <label for="regConfirm">Confirm Password</label>
+                    <input type="password" id="regConfirm" placeholder="Repeat password" required>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="agreeTerms" required>
+                    <label for="agreeTerms">I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+                <button type="submit" class="btn-submit">Create Account</button>
+                <p class="auth-switch">Already have an account? <a href="#" id="switchToLogin">Sign in</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Cart (<span id="cartItemCount">0</span>)</h3>
+            <button class="cart-close" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <p>Your cart is empty</p>
+                <a href="#footwear" class="continue-shopping" id="continueShop">Continue Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn-checkout">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <!-- CHECKOUT MODAL -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal-box checkout-box">
+            <button class="modal-close" id="closeCheckout">&times;</button>
+
+            <!-- Step Indicator -->
+            <div class="checkout-steps">
+                <div class="step active" id="step-dot-1"><span>1</span><p>Shipping</p></div>
+                <div class="step-line"></div>
+                <div class="step" id="step-dot-2"><span>2</span><p>Payment</p></div>
+                <div class="step-line"></div>
+                <div class="step" id="step-dot-3"><span>3</span><p>Confirm</p></div>
+            </div>
+
+            <!-- STEP 1: Shipping -->
+            <div class="checkout-step" id="checkoutStep1">
+                <div class="modal-header">
+                    <h2>Shipping Details</h2>
+                    <p>Where should we send your order?</p>
+                </div>
+                <form class="auth-form" id="shippingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="shipFirst">First Name</label>
+                            <input type="text" id="shipFirst" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="shipLast">Last Name</label>
+                            <input type="text" id="shipLast" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="shipEmail">Email Address</label>
+                        <input type="email" id="shipEmail" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="shipAddress">Street Address</label>
+                        <input type="text" id="shipAddress" placeholder="123 Main Street" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="shipCity">City</label>
+                            <input type="text" id="shipCity" placeholder="New York" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="shipZip">ZIP Code</label>
+                            <input type="text" id="shipZip" placeholder="10001" maxlength="10" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="shipCountry">Country</label>
+                        <select id="shipCountry" class="form-select" required>
+                            <option value="">Select country</option>
+                            <option value="US">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="CA">Canada</option>
+                            <option value="AU">Australia</option>
+                            <option value="DE">Germany</option>
+                            <option value="FR">France</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Continue to Payment</button>
+                </form>
+            </div>
+
+            <!-- STEP 2: Payment -->
+            <div class="checkout-step" id="checkoutStep2" style="display:none">
+                <div class="modal-header">
+                    <h2>Payment Details</h2>
+                    <p>Your transaction is 100% secured</p>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary" id="orderSummary"></div>
+
+                <form class="auth-form" id="paymentForm">
+                    <div class="form-group">
+                        <label for="cardName">Cardholder Name</label>
+                        <input type="text" id="cardName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <div class="card-input-wrap">
+                            <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                            <div class="card-icons">
+                                <span class="card-icon visa">VISA</span>
+                                <span class="card-icon mc">MC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cardExpiry">Expiry Date</label>
+                            <input type="text" id="cardExpiry" placeholder="MM / YY" maxlength="7" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardCVV">CVV</label>
+                            <input type="password" id="cardCVV" placeholder="•••" maxlength="4" required>
+                        </div>
+                    </div>
+                    <div class="secure-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        SSL encrypted &amp; secure payment
+                    </div>
+                    <div class="checkout-btn-row">
+                        <button type="button" class="btn-back" id="backToShipping">&#8592; Back</button>
+                        <button type="submit" class="btn-submit" id="payBtn">Pay Now</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- STEP 3: Success -->
+            <div class="checkout-step" id="checkoutStep3" style="display:none">
+                <div class="order-success">
+                    <div class="success-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <h2>Order Confirmed!</h2>
+                    <p>Thank you for your purchase. Your order has been placed successfully.</p>
+                    <div class="order-number">Order <strong id="orderNumber">#SK-000000</strong></div>
+                    <div class="order-detail-row">
+                        <span>Estimated Delivery</span>
+                        <strong id="deliveryDate">—</strong>
+                    </div>
+                    <div class="order-detail-row">
+                        <span>Confirmation sent to</span>
+                        <strong id="confirmEmail">—</strong>
+                    </div>
+                    <button class="btn-submit" id="continueShopping">Continue Shopping</button>
+                </div>
+            </div>
+
+            <!-- Processing Overlay -->
+            <div class="processing-overlay" id="processingOverlay" style="display:none">
+                <div class="spinner"></div>
+                <p>Processing your payment…</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag">LIMITED TIME OFFER</span>
+            <h1 class="hero-title">50% OFF<br><span>EVERYTHING</span></h1>
+            <p class="hero-subtitle">Premium streetwear for the bold and fearless</p>
+            <div class="hero-buttons">
+                <a href="#footwear" class="hero-btn-primary">Shop Now</a>
+                <a href="#hoodies" class="hero-btn-secondary">Explore Collections</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat"><strong>Free Shipping</strong><span>On orders over $100</span></div>
+            <div class="stat"><strong>Easy Returns</strong><span>30-day return policy</span></div>
+            <div class="stat"><strong>Secure Payment</strong><span>100% safe transactions</span></div>
+            <div class="stat"><strong>24/7 Support</strong><span>Always here to help</span></div>
+        </div>
+    </section>
+
+    <!-- FOOTWEAR BANNER -->
+    <section class="section-banner banner-footwear" id="footwear">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <span class="banner-tag">Collection</span>
+            <h2>Footwear</h2>
+            <p>Step into the streets with confidence</p>
+        </div>
+    </section>
+
+    <!-- FOOTWEAR PRODUCTS -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Footwear Collection</h2>
+                <p>Premium quality street footwear crafted for the bold</p>
+            </div>
+            <div class="products-grid">
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/boots.jpg" alt="Leather Boots" loading="lazy">
+                        <span class="product-badge sale">Sale</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Leather Boots</h3>
+                        <p class="product-desc">Classic street-ready leather construction</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$129.99</span><span class="price-old">$259.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Leather Boots" data-price="129.99" data-img="img/boots.jpg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/sneaker.jpg" alt="Classic Sneakers" loading="lazy">
+                        <span class="product-badge new">New</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Classic Sneakers</h3>
+                        <p class="product-desc">Everyday comfort meets street style</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$89.99</span><span class="price-old">$179.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Classic Sneakers" data-price="89.99" data-img="img/sneaker.jpg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/sports.jpg" alt="Sports Runner" loading="lazy">
+                        <span class="product-badge sale">Sale</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Sports Runner</h3>
+                        <p class="product-desc">Built for speed and street performance</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$99.99</span><span class="price-old">$199.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Sports Runner" data-price="99.99" data-img="img/sports.jpg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/boots.jpg" alt="Chelsea Boots" loading="lazy">
+                        <span class="product-badge hot">Hot</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Chelsea Boots</h3>
+                        <p class="product-desc">Sleek profile with elastic side panels</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$149.99</span><span class="price-old">$299.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Chelsea Boots" data-price="149.99" data-img="img/boots.jpg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/sneaker.jpg" alt="High-Top Sneakers" loading="lazy">
+                        <span class="product-badge hot">Hot</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">High-Top Sneakers</h3>
+                        <p class="product-desc">Elevated ankle support with bold design</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$109.99</span><span class="price-old">$219.99</span></div>
+                            <button class="add-to-cart-btn" data-name="High-Top Sneakers" data-price="109.99" data-img="img/sneaker.jpg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/sports.jpg" alt="Trail Runner Pro" loading="lazy">
+                        <span class="product-badge new">New</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Trail Runner Pro</h3>
+                        <p class="product-desc">All-terrain grip with responsive cushioning</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$119.99</span><span class="price-old">$239.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Trail Runner Pro" data-price="119.99" data-img="img/sports.jpg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HOODIES BANNER -->
+    <section class="section-banner banner-hoodies" id="hoodies">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <span class="banner-tag">Collection</span>
+            <h2>Hoodies</h2>
+            <p>Heavy-weight blend for the authentic look</p>
+        </div>
+    </section>
+
+    <!-- HOODIES PRODUCTS -->
+    <section class="products-section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hoodies Collection</h2>
+                <p>Heavyweight blends crafted for authentic street culture</p>
+            </div>
+            <div class="products-grid">
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/hood1.jpeg" alt="Vintage Hood" loading="lazy">
+                        <span class="product-badge sale">Sale</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Vintage Hood</h3>
+                        <p class="product-desc">Distressed wash with retro streetwear vibes</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$79.99</span><span class="price-old">$159.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Vintage Hood" data-price="79.99" data-img="img/hood1.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/hood2.jpeg" alt="Dragon Hood" loading="lazy">
+                        <span class="product-badge hot">Hot</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Dragon Hood</h3>
+                        <p class="product-desc">Bold dragon embroidery on premium cotton</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$84.99</span><span class="price-old">$169.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Dragon Hood" data-price="84.99" data-img="img/hood2.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/hood3.jpeg" alt="White Dragon" loading="lazy">
+                        <span class="product-badge new">New</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">White Dragon</h3>
+                        <p class="product-desc">Clean white with minimal dragon print</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$89.99</span><span class="price-old">$179.99</span></div>
+                            <button class="add-to-cart-btn" data-name="White Dragon" data-price="89.99" data-img="img/hood3.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/hood1.jpeg" alt="Camo Hood" loading="lazy">
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Camo Hood</h3>
+                        <p class="product-desc">Oversized camouflage design for bold statements</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$74.99</span><span class="price-old">$149.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Camo Hood" data-price="74.99" data-img="img/hood1.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/hood2.jpeg" alt="Midnight Hood" loading="lazy">
+                        <span class="product-badge sale">Sale</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Midnight Hood</h3>
+                        <p class="product-desc">Deep charcoal heavyweight blend streetwear</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$94.99</span><span class="price-old">$189.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Midnight Hood" data-price="94.99" data-img="img/hood2.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/hood3.jpeg" alt="Oversized Hood" loading="lazy">
+                        <span class="product-badge new">New</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Oversized Hood</h3>
+                        <p class="product-desc">Extra-wide cut with dropped shoulders</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$99.99</span><span class="price-old">$199.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Oversized Hood" data-price="99.99" data-img="img/hood3.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HATS BANNER -->
+    <section class="section-banner banner-hats" id="hats">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <span class="banner-tag">Collection</span>
+            <h2>Hats</h2>
+            <p>Crown yourself with premium streetwear caps</p>
+        </div>
+    </section>
+
+    <!-- HATS PRODUCTS -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hats Collection</h2>
+                <p>Complete your look with premium streetwear caps</p>
+            </div>
+            <div class="products-grid">
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/cap1.jpeg" alt="Trucker Cap" loading="lazy">
+                        <span class="product-badge sale">Sale</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Trucker Cap</h3>
+                        <p class="product-desc">Breathable mesh back with bold front panel</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$34.99</span><span class="price-old">$69.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Trucker Cap" data-price="34.99" data-img="img/cap1.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/cap2.jpeg" alt="Mild Tone Snapback" loading="lazy">
+                        <span class="product-badge hot">Hot</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Mild Tone Snapback</h3>
+                        <p class="product-desc">Neutral tones with flat brim adjustable fit</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$39.99</span><span class="price-old">$79.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Mild Tone Snapback" data-price="39.99" data-img="img/cap2.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/cap3.jpeg" alt="Flight Cap" loading="lazy">
+                        <span class="product-badge new">New</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Flight Cap</h3>
+                        <p class="product-desc">Aviator-inspired design with structured crown</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$44.99</span><span class="price-old">$89.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Flight Cap" data-price="44.99" data-img="img/cap3.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/cap1.jpeg" alt="Mesh Trucker" loading="lazy">
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Mesh Trucker</h3>
+                        <p class="product-desc">Summer-ready full mesh with snapback closure</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$29.99</span><span class="price-old">$59.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Mesh Trucker" data-price="29.99" data-img="img/cap1.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/cap2.jpeg" alt="Urban Snapback" loading="lazy">
+                        <span class="product-badge sale">Sale</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Urban Snapback</h3>
+                        <p class="product-desc">City-inspired graphic print with premium fabric</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$49.99</span><span class="price-old">$99.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Urban Snapback" data-price="49.99" data-img="img/cap2.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/cap3.jpeg" alt="Dad Cap" loading="lazy">
+                        <span class="product-badge new">New</span>
+                        <div class="product-overlay"><button class="quick-view-btn">Quick View</button></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Dad Cap</h3>
+                        <p class="product-desc">Relaxed unstructured fit with vintage wash</p>
+                        <div class="product-footer">
+                            <div class="price-wrap"><span class="price">$24.99</span><span class="price-old">$49.99</span></div>
+                            <button class="add-to-cart-btn" data-name="Dad Cap" data-price="24.99" data-img="img/cap3.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Get 10% Off Your First Order</h2>
+                <p>Subscribe for exclusive drops, early access, and street culture updates</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>STREAKS</h3>
+                    <p>Premium streetwear for the bold, the fearless, and the authentic.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#footwear">Footwear</a></li>
+                        <li><a href="#hoodies">Hoodies</a></li>
+                        <li><a href="#hats">Hats</a></li>
+                        <li><a href="#home">New Arrivals</a></li>
+                        <li><a href="#home">Sale Items</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            streaks@gmail.com
+                        </li>
+                        <li>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.7 19.79 19.79 0 0 1 1.61 5.07 2 2 0 0 1 3.59 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10c1.36 2.34 3.29 4.27 5.63 5.63l.75-.75a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            +1 (555) 408-3100
+                        </li>
+                        <li>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            New York, NY 10001
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 STREAKS. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
 </html>
